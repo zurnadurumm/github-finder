@@ -36,7 +36,7 @@ export const GithubProvider = ({ children }) => {
         const res = await fetch(`${GITHUB_URL}search/users?${params}`,
             {
                 headers: {
-                    Authorization: `token ${GITHUB_TOKEN}`
+                    Authorization: `Bearer ${GITHUB_TOKEN}`
                 }
             })
         const { items } = await res.json()
